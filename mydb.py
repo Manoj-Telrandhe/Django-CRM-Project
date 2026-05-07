@@ -3,7 +3,7 @@ import mysql.connector # type: ignore
 dataBase = mysql.connector.connect(
     host= 'localhost', 
     user = 'root',
-    password = 'Mjbaba@22',
+    password = '',
     port = 3306
     )
 

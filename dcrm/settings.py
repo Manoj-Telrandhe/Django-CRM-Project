@@ -79,7 +79,7 @@ DATABASES = {
         # "NAME": BASE_DIR / "db.sqlite3",
         "NAME" : "eldercodb",
         "USER" : "root",
-        "PASSWORD" : "Mjbaba@22",
+        "PASSWORD" : "",
         "HOST" : "localhost",
         "PORT" : "3306",
     }
