@@ -1,9 +1,16 @@
-import mysql.connector # type: ignore
+import mysql.connector  # type: ignore
+
+import os
+from dotenv import load_dotenv
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+load_dotenv(BASE_DIR / ".env")
 
 dataBase = mysql.connector.connect(
     host= 'localhost', 
     user = 'root',
-    password = '',
+    password = os.getenv("DB_PASSWORD"),
     port = 3306
     )
 
@@ -13,5 +20,5 @@ cursorObject = dataBase.cursor()
 # Create a database
 cursorObject.execute("CREATE DATABASE eldercodb")
 
-print("All Done!")
+
 print("Connected successfully!")
